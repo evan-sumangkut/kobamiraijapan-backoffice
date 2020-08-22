@@ -34,7 +34,6 @@ class MagangController extends Controller
     public function add(Request $request)
     {
       $input = $request->all();
-      dd($input);
       $input['peserta_id'] = null;
       try {
         DB::beginTransaction();
@@ -79,7 +78,6 @@ class MagangController extends Controller
     public function update(Request $request,$id)
     {
       $input = $request->all();
-      dd($input);
       $input['peserta_id'] = $id;
       try {
         DB::beginTransaction();
